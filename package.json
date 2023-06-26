@@ -1,9 +1,9 @@
 {
   "private": true,
-  "name": "my-nextron-app",
-  "description": "My application description",
+  "name": "budget",
+  "description": "Personal Budget",
   "version": "1.0.0",
-  "author": "Yoshihide Shiono <shiono.yoshihide@gmail.com>",
+  "author": "Dev Rabbit <williamsmoisha@gmail.com>",
   "main": "app/background.js",
   "scripts": {
     "dev": "nextron",
