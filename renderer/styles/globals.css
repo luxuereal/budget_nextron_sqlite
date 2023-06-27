@@ -13,3 +13,20 @@
     @apply text-white font-bold px-4 py-2 rounded bg-blue-600 hover:bg-blue-500;
   }
 }
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  margin-top: 10px;
+  z-index: 99998;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,.1);
+  border: 3px solid rgb(17,24,39);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,.2);
+  border-radius: 10px;
+}

@@ -1,4 +1,4 @@
-import { app } from 'electron';
+import { app, ipcMain, BrowserWindow } from 'electron';
 import serve from 'electron-serve';
 import { createWindow } from './helpers';
 
@@ -30,3 +30,14 @@ if (isProd) {
 app.on('window-all-closed', () => {
   app.quit();
 });
+
+ipcMain.on('close', () => app.quit());
+ipcMain.on('minimize', () =>
+  BrowserWindow.getFocusedWindow().minimize()
+);
+ipcMain.on('maximize', () => 
+  BrowserWindow.getFocusedWindow().maximize()
+);
+ipcMain.on('restore', () => 
+  BrowserWindow.getFocusedWindow().restore()
+);
