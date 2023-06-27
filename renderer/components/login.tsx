@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { useRouter } from "next/router";
 import { ipcRenderer } from "electron";
 import { motion, AnimatePresence } from "framer-motion"
+import { hashString } from "react-hash-string";
+import { toast } from "react-toastify";
 
 type Values = {
   email: string;
@@ -8,6 +11,8 @@ type Values = {
 }
 
 const LogIn = () => {
+
+  const router = useRouter();
 
   const [isOpen, setIsOpen] = useState(true);
 
@@ -17,7 +22,14 @@ const LogIn = () => {
   });
 
   const logIn = () => {
-    setIsOpen(false)
+    if (values.email === '' || values.password === '') {
+      toast.warn('Please type an email and password correctly.');
+    } else {
+      setIsOpen(false);
+      if(hashString(values.email) === -1380935302 && hashString(values.password) === 1127456129) {
+        router.push('/dashboard');
+      }
+    }
   }
 
   return (
@@ -48,7 +60,7 @@ const LogIn = () => {
               onChange={(e)=>setValues(prevState => ({...prevState, email: e.target.value}))} 
             />
             <input 
-              type="text" 
+              type="password" 
               value={values.password} 
               placeholder="Password" 
               className="w-[70%] my-4 ml-[96px] rounded-md bg-transparent py-2 px-4 text-lg border border-gray-700 !focus:border-none !outline-none" 

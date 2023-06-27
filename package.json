@@ -3,7 +3,7 @@
   "name": "my-nextron-app",
   "description": "My application description",
   "version": "1.0.0",
-  "author": "Yoshihide Shiono <shiono.yoshihide@gmail.com>",
+  "author": "bravedevrabbit <williamsmoisha@gmail.com>",
   "main": "app/background.js",
   "scripts": {
     "dev": "nextron",
@@ -15,7 +15,9 @@
     "electron-serve": "^1.1.0",
     "electron-store": "^8.1.0",
     "framer-motion": "^10.12.17",
-    "react-icons": "^4.10.1"
+    "react-hash-string": "^1.0.0",
+    "react-icons": "^4.10.1",
+    "react-toastify": "^9.1.3"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
