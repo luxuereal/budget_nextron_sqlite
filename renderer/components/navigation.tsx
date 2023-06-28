@@ -10,14 +10,14 @@ const Navigation = () => {
   const router = useRouter();
 
   const genStyle = (path: string) => 
-    router.pathname === path 
+    router.pathname.startsWith(path) 
       ?  `flex gap-4 mb-1 px-4 py-2 hover:bg-gray-800 rounded-md items-center bg-gray-800`
       : 'flex gap-4 mb-1 px-4 py-2 hover:bg-gray-800 rounded-md items-center'
 
   return (
     <div className="flex flex-col gap-3 mt-4 w-full text-xl">
       <List>
-        <Link href="/dashboard">
+        <Link href="/dashboard/0">
           <ListItem className={genStyle('/dashboard')}>
             <ListItemPrefix>
               <FaChartPie />

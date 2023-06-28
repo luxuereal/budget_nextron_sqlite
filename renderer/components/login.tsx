@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from "framer-motion"
 import { hashString } from "react-hash-string";
 import { toast } from "react-toastify";
 
+import { USER_EMAIL, USER_KEY } from "../utils/constants";
+
 type Values = {
   email: string;
   password: string;
@@ -26,8 +28,8 @@ const LogIn = () => {
       toast.warn('Please type an email and password correctly.');
     } else {
       setIsOpen(false);
-      if(hashString(values.email) === -1380935302 && hashString(values.password) === 1127456129) {
-        router.push('/dashboard');
+      if(hashString(values.email) === USER_EMAIL && hashString(values.password) === USER_KEY) {
+        router.push('/dashboard/1');
       }
     }
   }
