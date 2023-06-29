@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 
 import Layout from '../../components/layout';
 
-function Dashboard() {
+const Dashboard = () => {
 
   const router = useRouter();
 
