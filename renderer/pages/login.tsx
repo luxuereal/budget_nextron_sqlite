@@ -11,7 +11,7 @@ const Login = () => {
       <ToastContainer position="top-center" theme="dark" autoClose={3000} />
       <div className='w-[500px] h-[250px] absolute right-2 bottom-16'>
         <Image width="1000" height="600" className='w-[500px] h-[250px] object-cover' src="/images/bg.png" alt="" />
-      T</div>
+      </div>
       <LogIn />
     </div>
   );

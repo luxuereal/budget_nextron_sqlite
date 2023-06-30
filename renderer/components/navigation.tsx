@@ -57,6 +57,14 @@ const Navigation = () => {
             Settings
           </ListItem>
         </Link>
+        <Link href="/login">
+          <ListItem className={genStyle('/login')}>
+            <ListItemPrefix>
+              <FaGears />
+            </ListItemPrefix>
+            Log Out
+          </ListItem>
+        </Link>
       </List>
     </div>
   )

@@ -49,7 +49,7 @@ const LogIn = () => {
           exit={{
             opacity: 0,
             y: 20,
-            transition: { duration: 0.5 },
+            transition: { duration: 0.2 },
           }}
         >
           <div className="w-[640px] h-[400px] border border-gray-700 rounded-md mx-auto mt-[calc(50vh-200px)] backdrop-blur p-4">
