@@ -17,7 +17,7 @@ function Dashboard() {
 
   return (
     <Layout>
-      Dashboard
+      Dashboard Page
     </Layout>
   );
 }
