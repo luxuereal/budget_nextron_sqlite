@@ -17,7 +17,7 @@ const Dashboard = () => {
 
   return (
     <Layout>
-      Dashboard
+      Dashboard Page
     </Layout>
   );
 }
